@@ -46,6 +46,8 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+        
+        PhoneCallTrap.onCall(this.onPhoneStateChanged,onError);
 		
 		//window.open(encodeURI("http://www.rinorusso.it"), '_self', 'location=no');
 		
@@ -55,5 +57,31 @@ var app = {
         // ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
         // ref.addEventListener('exit', function(event) { alert(event.type); });
 		
-    }
+    },
+    
+    onPhoneStateChanged: function(phoneState) 
+		{
+			//alert(phoneState);
+			
+    switch (phoneState) {
+        case "RINGING":
+            console.log('Phone is ringing.');
+            break;
+        case "OFFHOOK":
+            console.log('Phone is off the hook.');
+            break;
+        case "IDLE":
+            console.log('Phone has returned to the idle state.');
+            break;
+        default:
+            // no default...
+    		}
+	},
+
+    onError: function(error) 
+		{
+            console.log('Error '+error);
+		}	
+		
+		
 };

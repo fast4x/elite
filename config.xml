@@ -1,7 +1,7 @@
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="it.rinorusso.quovado" version="1.0.0">
-  <name>QuoVADO</name>
-  <description>QuoVADO client</description>
-  <author href="http://www.rinorusso.it" email="info@rinorusso.it">QuoVADO Team</author>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="it.rinorusso.elite" version="1.0.0">
+  <name>Elite</name>
+  <description>Elite client</description>
+  <author href="http://www.rinorusso.it" email="info@rinorusso.it">rinorusso.it</author>
   <content src="index.html"/>
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="android-minSdkVersion" value="14"/>
@@ -26,6 +26,7 @@
   <plugin name="cordova-plugin-statusbar" source="npm" spec="~2.1.2"/>
   <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0"/>
   <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1"/>
+  <plugin name="com.sample.phonecalltrap" spec="0.0.1" source="pgb" />
   <icon src="icon.png" width="128" height="128"/>
   <platform name="android">  
     <icon src="icon.png" width="128" height="128"/>
